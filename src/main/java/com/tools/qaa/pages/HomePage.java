@@ -1,10 +1,16 @@
-# Selenium Select2 wrapper
+package com.tools.qaa.pages;
 
-Allows WebDriver to interact with Select2 via its native API.
+import com.tools.qaa.core.BasePage;
+import com.tools.qaa.annotations.HTML;
+import com.tools.qaa.elements.Select2;
 
-You can find more details in the following article:
- 
-```java
+import static com.tools.qaa.elements.HTMLElement.SearchBy.*;
+
+/**
+ * Author: Sergey Korol.
+ */
+public class HomePage extends BasePage {
+
 	@HTML(searchBy = CSS_SELECTOR, value = "div[id*=listBox1]")
 	private Select2 listBoxWeekDay;
 
@@ -16,4 +22,4 @@ You can find more details in the following article:
 	public String getSelectedWeekDay() {
 		return listBoxWeekDay.getSelectedText();
 	}
-```
+}
